@@ -86,7 +86,7 @@ function draw(){
   //dar tamaño y color al score
   textSize(20);
   fill("black");
-  text("Puntuación: " + score, 30, 50);
+  text("Puntuación: " + score, 30, 30);
   
   //instrucciones del estado PLAY
   if (gameState === PLAY) {
@@ -177,7 +177,7 @@ function spawnClouds() {
     //crear sprite de nubes
     var cloud = createSprite(width+20, height-300, 40, 10);
     cloud.addImage(cloudImage);
-    cloud.y = Math.round(random(10,100));
+    cloud.y = Math.round(random(50,100));
     cloud.scale = 0.5;
     cloud.velocityX = -3;
     
@@ -188,7 +188,7 @@ function spawnClouds() {
     sun.depth = sun.depth + 1; 
     
     //establecer tiempo de vida para las nubes
-    cloud.lifetime = Math.round(width/3) - 65;
+    cloud.lifetime = Math.round(width/3);
     
     //agregar cada nube a su grupo
     cloudsGroup.add(cloud);
